@@ -35,9 +35,9 @@ public class CSVParserUtil {
         Reader reader = br;
 
         csvReader = new CSVReader(reader);
-        elementWavelengths = new LinkedHashMap<String, ArrayList<String>>();
-        elementWavelengthIntensities = new LinkedHashMap<Integer, ArrayList<Double>>();
-        elementIntensityIndices = new LinkedHashMap<String, Integer>();
+        elementWavelengths = new LinkedHashMap<>();
+        elementWavelengthIntensities = new LinkedHashMap<>();
+        elementIntensityIndices = new LinkedHashMap<>();
     }
 
     private void readCSV() throws Exception{
@@ -126,7 +126,10 @@ public class CSVParserUtil {
                         String element = String.valueOf(elementIntensityIndices.entrySet().toArray()[z]);
                         String index = element.split("=")[1];
                         ArrayList<Double> elementWavelengths = elementWavelengthIntensities.get(Integer.valueOf(index));
-                        row[z + 2] = String.valueOf(elementWavelengths.get(total + (-i*shotSizeHeight) - (shotSizeHeight) + j));
+                        Double wlVal = elementWavelengths.get(total + (-i*shotSizeHeight) - (shotSizeHeight) + j);
+                        String wlValStr = (wlVal != null) ? String.valueOf(wlVal) : "";
+
+                        row[z + 2] = wlValStr;
                     }
 
                     csvWriter.writeNext(row);
