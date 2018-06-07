@@ -1,5 +1,6 @@
 To Run:
-java -jar WavelengthIntensityCSVReverse.jar "FULL_FILE_PATH_NAME"
+
+`java -jar WavelengthIntensityCSVReverse.jar "FULL_FILE_PATH_NAME"`
 
 
 Generates a new .csv in the same folder path as specified file.
