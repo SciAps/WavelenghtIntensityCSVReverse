@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WavelengthIntensityCSVReverse:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WavelengthIntensityCSVReverse_jar</output-path>
+    <root id="archive" name="WavelengthIntensityCSVReverse.jar">
+      <element id="module-output" name="WavelengthIntensityCSVReverse" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/opencsv-2.1-1.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

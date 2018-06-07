@@ -115,12 +115,12 @@ public class CSVParserUtil {
             headerArr = header.toArray(headerArr);
             csvWriter.writeNext(headerArr);
 
+            final int total = (shotSizeHeight * shotSizeHeight);
             for (int i = 0;i < shotSizeHeight;i++) {
                 for (int j = 0;j < shotSizeHeight;j++) {
                     String[] row = new String[elementIntensityIndices.size() + 2];
                     row[0] = String.valueOf(j + 1);
                     row[1] = String.valueOf(i + 1);
-                    int total = (shotSizeHeight * shotSizeHeight);
 
                     for (int z = 0;z < elementIntensityIndices.size();z++) {
                         String element = String.valueOf(elementIntensityIndices.entrySet().toArray()[z]);
